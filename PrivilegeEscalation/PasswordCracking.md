@@ -1,6 +1,12 @@
 ## Intro
 This covers all scenarios where password may need to be cracked
 
+## Identifying hashes
+```
+wget https://gitlab.com/kalilinux/packages/hash-identifier/-/raw/kali/master/hash-id.py.
+
+python3 hash-id.py
+```
 
 ## John
 ### Basic
@@ -13,8 +19,19 @@ john foundusers.txt
 john --wordlist=/usr/share/wordlists/rockyou.txt foundusers.txt
 
 # specify format
-john --format=raw-md5 1.txt 
+# E.g: NT, LM, raw-md5, raw-sha1, raw-sha256
+john --format=raw-md5 1.txt
 ```
+### passwd and shadow
+```
+# combine the passwd and shadow files
+# unshadow [path to passwd] [path to shadow]
+unshadow passwd shadow > unshadow.txt
+
+# Crack the unshadowed file
+john --wordlist=/usr/share/wordlists/rockyou.txt --format=sha512crypt unshadowed.txt
+```
+
 ## Hashcat
 Hashcat needs to know explicitly what we want to crack, we use "mode" to specify it
 
