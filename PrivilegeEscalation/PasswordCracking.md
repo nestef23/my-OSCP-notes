@@ -78,3 +78,4 @@ hashcat -m 1710 -o results.txt hash.txt /usr/share/wordlists/rockyou.txt
 # It may be very slow
 hydra <IP> -l <user> -P /usr/share/wordlists/rockyou.txt http-post-form "/hydra/login.php:login=^USER^&haslo=^PASS^:Zle haslo"
 ```
+Hydra can be also used to attack FTP, SSH, SMTP, SMB and more. 
