@@ -16,6 +16,17 @@ If website blocks upload of your webshell, try this
 
 https://book.hacktricks.xyz/pentesting-web/file-upload
 
+## Upgrade shell
+When shell works, but does not support all features
+```
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+export TERM=xterm-256color
+<CTRL+Z>
+stty -echo raw
+fg
+stty rows 41 columns 166
+```
+
 ## Apache
 Basic PHP webshell
 ```
