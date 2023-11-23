@@ -73,3 +73,8 @@ hashcat -m 1710 -o results.txt hash.txt /usr/share/wordlists/rockyou.txt
 # /usr/share/wordlists/rockyou.txt – wordlist
 ```
 ## Hydra
+### HTTP Post form
+```
+# It may be very slow
+hydra <IP> -l <user> -P /usr/share/wordlists/rockyou.txt http-post-form "/hydra/login.php:login=^USER^&haslo=^PASS^:Zle haslo"
+```
