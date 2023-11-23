@@ -11,6 +11,9 @@ john foundusers.txt
 
 # use custom wordlist 
 john --wordlist=/usr/share/wordlists/rockyou.txt foundusers.txt
+
+# specify format
+john --format=raw-md5 1.txt 
 ```
 ## Hashcat
 Hashcat needs to know explicitly what we want to crack, we use "mode" to specify it
