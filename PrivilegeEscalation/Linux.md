@@ -12,9 +12,11 @@ sudo -l
 ```
 
 
-## SUID filed
-Executables that are executed in the context of root user
+## SUID file
+Executables that are executed in the context of root user.
 Find all SUID files and look for the weird ones (e.g. in the user dir)
+
+List of all commonly exploited SUID binaries: https://gtfobins.github.io/#+suid
 ```
 find / -type f -perm -u=s 2>/dev/null
 # or
