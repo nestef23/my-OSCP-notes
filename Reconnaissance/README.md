@@ -17,5 +17,7 @@ Nmap offers great scripts for additional scanning of discovered services
 ls -alh /usr/share/nmap/scripts/*ssh*
 ```
 
+### Additional sources
+https://fareedfauzi.gitbook.io/oscp-playbook/port-scanning/nmap-scanning
 
 
