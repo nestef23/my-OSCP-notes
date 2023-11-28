@@ -18,6 +18,8 @@ Also check which environment variables are inherited (look for the env_keep opti
 sudo -l
 ```
 
+## passwd and shadow
+
 Check if you can read/write /etc/shadow.
 - Can Write -> replace root password
 - Can Read -> crack the passwords
@@ -35,6 +37,12 @@ ls -l /etc/passwd
 
 # Generate new password hash to overwrite /etc/passwd
 openssl passwd test
+```
+
+## Crontab
+Check what is executed in cron
+```
+cat /etc/crontab
 ```
 
 ## SUID file
