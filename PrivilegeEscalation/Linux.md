@@ -59,9 +59,13 @@ find / -type f -perm -u=s 2>/dev/null
 find / -user root -perm -4000 -print 2>/dev/null
 ```
 ## Passwords & keys
-Maybe password is available in any log file?
+Maybe password is available in any log or config file?
 ```
+# User history
 cat ~/.*history | grep pass
+
+# SSH config files (must be readable)
+find / -name ".ssh" 2>/dev/null
 ```
 
 ## Find exploits
