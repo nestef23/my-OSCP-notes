@@ -59,6 +59,9 @@ find / -type f -perm -u=s 2>/dev/null
 # or
 find / -user root -perm -4000 -print 2>/dev/null
 ```
+## Find exploits
+https://www.exploit-db.com/
+- Exploits for SUID executables
 
 ## Additional materials
 https://book.hacktricks.xyz/linux-hardening/linux-privilege-escalation-checklist
