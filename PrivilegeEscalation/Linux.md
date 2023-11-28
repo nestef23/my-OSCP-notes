@@ -9,7 +9,9 @@ Check if you can become root without password
 su root
 ```
 
-Check what priviliges you have (what can be run withiut root password)
+Check what priviliges you have (what can be run as sudo without password)
+
+Compare with the list here: https://gtfobins.github.io/#+sudo
 ```
 sudo -l
 ```
