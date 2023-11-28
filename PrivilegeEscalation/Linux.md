@@ -12,6 +12,8 @@ su root
 Check what priviliges you have (what can be run as sudo without password)
 
 Compare with the list here: https://gtfobins.github.io/#+sudo
+
+Also check which environment variables are inherited (look for the env_keep options)
 ```
 sudo -l
 ```
