@@ -8,21 +8,30 @@ Check if you can become root without password
 ```
 su root
 ```
-Check what priviliges you have
+
+Check what priviliges you have (what can be run withiut root password)
 ```
 sudo -l
 ```
-Check if you can read/write /etc/shadow.
 
-- Can Write -> add new user
+Check if you can read/write /etc/shadow.
+- Can Write -> replace root password
 - Can Read -> crack the passwords
 ```
 ls -l /etc/shadow
 
-# Generate new password in to overwrite /etc/shadow
+# Generate new password hash to overwrite /etc/shadow
 mkpasswd -m sha-512 test
 ```
 
+Check if you can write to /etc/passwd
+- Can write -> add root password directly here
+```
+ls -l /etc/passwd
+
+# Generate new password hash to overwrite /etc/passwd
+openssl passwd test
+```
 
 ## SUID file
 Executables that are executed in the context of root user.
