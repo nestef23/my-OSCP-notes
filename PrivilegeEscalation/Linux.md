@@ -41,6 +41,8 @@ openssl passwd test
 
 ## Crontab
 Check what is executed in cron
+- edit the .sh files if possible
+- replace executable files
 ```
 cat /etc/crontab
 ```
