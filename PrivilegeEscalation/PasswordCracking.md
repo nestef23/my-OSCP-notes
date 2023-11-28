@@ -29,7 +29,7 @@ john --format=raw-md5 1.txt
 unshadow passwd shadow > unshadow.txt
 
 # Crack the unshadowed file
-john --wordlist=/usr/share/wordlists/rockyou.txt --format=sha512crypt unshadowed.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt --format=sha512crypt unshadow.txt
 ```
 ### SHH keys
 ```
