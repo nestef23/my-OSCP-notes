@@ -72,5 +72,8 @@ find / -name ".ssh" 2>/dev/null
 https://www.exploit-db.com/
 - Exploits for SUID executables
 
+https://github.com/jondonas/linux-exploit-suggester-2
+- Exploits for the Linux itself
+
 ## Additional materials
 https://book.hacktricks.xyz/linux-hardening/linux-privilege-escalation-checklist
