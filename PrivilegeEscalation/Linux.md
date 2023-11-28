@@ -12,6 +12,16 @@ Check what priviliges you have
 ```
 sudo -l
 ```
+Check if you can read/write /etc/shadow.
+
+- Can Write -> add new user
+- Can Read -> crack the passwords
+```
+ls -l /etc/shadow
+
+# Generate new password in to overwrite /etc/shadow
+mkpasswd -m sha-512 test
+```
 
 
 ## SUID file
