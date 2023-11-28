@@ -17,7 +17,6 @@ Also check which environment variables are inherited (look for the env_keep opti
 ```
 sudo -l
 ```
-
 ## passwd and shadow
 
 Check if you can read/write /etc/shadow.
@@ -59,6 +58,12 @@ find / -type f -perm -u=s 2>/dev/null
 # or
 find / -user root -perm -4000 -print 2>/dev/null
 ```
+## Passwords & keys
+Maybe password is available in any log file?
+```
+cat ~/.*history | grep pass
+```
+
 ## Find exploits
 https://www.exploit-db.com/
 - Exploits for SUID executables
