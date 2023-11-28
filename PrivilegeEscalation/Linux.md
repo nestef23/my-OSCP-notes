@@ -42,7 +42,8 @@ openssl passwd test
 ## Crontab
 Check what is executed in cron
 - edit the .sh files if possible
-- replace executable files
+- replace executable files\
+- check location of the PATH variable, can you do search order hijacking?
 ```
 cat /etc/crontab
 ```
