@@ -1,6 +1,8 @@
 ## Intro
 Use Linpeas if possible
 
+https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
+
 ## Basic
 Check if you can become root without password
 ```
@@ -22,3 +24,6 @@ find / -type f -perm -u=s 2>/dev/null
 # or
 find / -user root -perm -4000 -print 2>/dev/null
 ```
+
+## Additional materials
+https://book.hacktricks.xyz/linux-hardening/linux-privilege-escalation-checklist
