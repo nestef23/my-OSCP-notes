@@ -3,6 +3,8 @@ Use Linpeas if possible
 
 https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
 
+Alternative enumeration script: https://github.com/diego-treitos/linux-smart-enumeration/tree/master
+
 ## Basic
 Check if you can become root without password
 ```
