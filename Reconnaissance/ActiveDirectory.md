@@ -21,4 +21,4 @@ Find-InterestingDomainAcl -ResolveGuids | Where-Object { $_.IdentityReferenceNam
 ```
 Intereting findings:
 - `GenericWrite` permission can be used to compromise the account with that privilege by updating the `msDS-KeyCredentialLink` with a certificate. This vulnerability is known as the **Shadow Credentials attack**.
-To exploit vulnerable user read `Whisker` from AD PrivEsc cheatsheet
+To exploit vulnerable user read `Shadow Credentials` from AD PrivEsc cheatsheet
