@@ -17,6 +17,7 @@ Usage
 Find-InterestingDomainAcl -ResolveGuids
 
 # Use filtering and select only interesting columns
+# You can filter column IdentityReferenceName by the name of current user to check what priviliges you have over other users
 Find-InterestingDomainAcl -ResolveGuids | Where-Object { $_.IdentityReferenceName -eq "hr" } | Select-Object IdentityReferenceName, ObjectDN, ActiveDirectoryRights
 ```
 Intereting findings:
