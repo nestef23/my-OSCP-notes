@@ -29,3 +29,14 @@ python -m http.server 8081
 ```
 nc -nlvp 4445
 ```
+
+## Upgrade shell
+When shell works, but does not support all features
+```
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+export TERM=xterm-256color
+<CTRL+Z>
+stty -echo raw
+fg
+stty rows 41 columns 166
+```
