@@ -12,7 +12,7 @@ nmap -sV -O -vv -T4 -p 1-50000 <IP>
 # -T4 - scan faster
 
 # Run Nmap safe scripts
-nmap -sV -sc <IP>
+nmap -sV -sC <IP>
 ```
 Nmap offers great scripts for additional scanning of discovered services
 ```
