@@ -1,0 +1,11 @@
+# RDP
+
+## xfreerdp
+Used from Linux commandline
+```
+xfreerdp /v:<IP>
+xfreerdp /v:<IP> /u:<user>
+
+#Try default account with blank password?
+xfreerdp /v:10.129.1.13 /u:Administrator
+```
