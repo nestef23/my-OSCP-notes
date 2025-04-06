@@ -87,6 +87,15 @@ cat ~/.*history | grep pass
 find / -name ".ssh" 2>/dev/null
 ```
 
+## Services & listening ports
+```
+# show the port
+ss -tln
+
+#show the name
+ss -tl
+```
+
 ## Find exploits
 https://www.exploit-db.com/
 - Exploits for SUID executables
