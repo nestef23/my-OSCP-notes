@@ -36,6 +36,10 @@ Also check which environment variables are inherited (look for the env_keep opti
 ```
 sudo -l
 ```
+## Interesting binaries
+If there is any interesting binary (e.g suid or sudo) check ot how to exploit it here:\
+https://gtfobins.github.io/
+
 ## passwd and shadow
 
 Check if you can read/write /etc/shadow.
