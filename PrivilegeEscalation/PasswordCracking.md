@@ -41,24 +41,16 @@ ssh2john id_rsa > id_rsa_hash.txt
 john --wordlist=/usr/share/wordlists/rockyou.txt id_rsa_hash.txt
 ```
 
-### ZIP files
+### ZIP & RAR files
+If we manage to get a password-protected ZIP file we can use **John the ripper** to crack te password.
 ```
 # Generate text file john understands
 # rar2john [rar file] > [output file]
-rar2john rarfile.rar > rar_hash.txt
+rar2john rarfile.rar > hash.txt
+zip2john backup.zip > hash.txt
 
 # Crack the output file
-john --wordlist=/usr/share/wordlists/rockyou.txt zip_hash.txt
-```
-
-### RAR files
-```
-# Generate text file john understands
-# zip2john [options] [zip file] > [output file]
-zip2john zipfile.zip > zip_hash.txt
-
-# Crack the output file
-john --wordlist=/usr/share/wordlists/rockyou.txt rar_hash.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 ```
 
 ## Hashcat
