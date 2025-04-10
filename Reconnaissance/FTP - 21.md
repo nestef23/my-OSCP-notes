@@ -22,3 +22,10 @@ ls
 # Download file
 get <filename>
 ```
+
+## ZIP cracking
+If we manage to get a password-protected ZIP file we can use **John the ripper** to crack te password.
+```
+zip2john backup.zip > backup_hash.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt backup_hash.txt
+```
