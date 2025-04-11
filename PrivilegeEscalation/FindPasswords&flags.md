@@ -4,6 +4,9 @@
 # replace user.txt with root.txt as needed
 find / -type f -name "user.txt" 2>/dev/null
 find / -type f -name "user.txt" 2>/dev/null -exec cat {} \;
+
+find / -type f -name "root.txt" 2>/dev/null
+find / -type f -name "root.txt" 2>/dev/null -exec cat {} \;
 ```
 ### Windows
 ```
