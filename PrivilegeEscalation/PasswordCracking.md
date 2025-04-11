@@ -7,6 +7,10 @@ wget https://gitlab.com/kalilinux/packages/hash-identifier/-/raw/kali/master/has
 
 python3 hash-id.py
 ```
+It is already installed on Kali as **hash-identifier**
+```
+hash-identifier
+```
 
 ## John
 ### Basic
