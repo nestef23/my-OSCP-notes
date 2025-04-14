@@ -11,6 +11,8 @@ Great reverse shell generator
 
 https://www.revshells.com/
 
+**PHP PentestMonkey** works great!
+
 ## File Upload bypass
 If website blocks upload of your webshell, try this
 
