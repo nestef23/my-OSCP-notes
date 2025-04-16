@@ -21,6 +21,9 @@ ls
 
 # Download file
 get <filename>
+
+# Upload file
+put <filename>
 ```
 
 ## ZIP cracking
