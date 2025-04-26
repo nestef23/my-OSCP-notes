@@ -43,6 +43,23 @@ Also check which environment variables are inherited (look for the env_keep opti
 ```
 sudo -l
 ```
+## Groups
+List user groups (permissions)
+```
+id
+# OR
+groups
+```
+Look for anything outside of standard user groups.
+To get more info about specific group use
+```
+# get group basic info
+grep <groupname> /etc/group
+
+# To see everything a group owns:
+find / -group <groupname> 2>/dev/null
+```
+
 ## Interesting binaries
 If there is any interesting binary (e.g suid or sudo) check ot how to exploit it here:\
 https://gtfobins.github.io/
