@@ -20,6 +20,8 @@ ftp anonymous@<IP>
 ls
 
 # Download file
+# IMPORTANT - before transferring binary files use
+# type binary
 get <filename>
 
 # Upload file
