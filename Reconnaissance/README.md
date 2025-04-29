@@ -18,6 +18,10 @@ Nmap offers great scripts for additional scanning of discovered services
 # Find all scripts with ssh in the name
 ls -alh /usr/share/nmap/scripts/*ssh*
 ```
+Basic vuln scan
+```
+nmap -Pn -T5 --script vuln <IP>
+```
 
 ### Additional sources
 https://fareedfauzi.gitbook.io/oscp-playbook/port-scanning/nmap-scanning
