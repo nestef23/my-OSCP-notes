@@ -10,6 +10,6 @@ ssh -p <port> <user>@<IP>
 
 # Certificate (located in the same directory)
 nano id_rsa
-chmod id_rsa 600
+chmod id_rsa 400
 ssh -i id_rsa -p <port> <user>@<IP>
 ```
