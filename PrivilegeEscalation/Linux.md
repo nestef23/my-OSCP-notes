@@ -46,6 +46,11 @@ Also check which environment variables are inherited (look for the env_keep opti
 ```
 sudo -l
 ```
+## Processes
+Look for anything out of the ordinary
+```
+ps -ef
+```
 ## Groups
 List user groups (permissions)
 ```
