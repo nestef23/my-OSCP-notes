@@ -1,3 +1,7 @@
+Also check out:
+
+https://github.com/nestef23/my-OSCP-notes/blob/main/Reconnaissance/SMB%20-%20445.md
+
 ## lookupsid
 lookupsid.py
 ### Enumerate users
