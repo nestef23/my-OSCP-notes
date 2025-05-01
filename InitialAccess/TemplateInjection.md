@@ -4,7 +4,7 @@ https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20
 ## Detect
 To detect template injection start with following
 ```
-{{7*'7'}
+{{7*'7'}}
 {{7*'7'}}
 ```
 https://portswigger.net/web-security/images/template-decision-tree.png
