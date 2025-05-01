@@ -7,6 +7,7 @@ To detect template injection start with following
 ${7*7}
 {{7*7}}
 {{7*'7'}}
+# For example, the payload {{7*'7'}} returns 49 in Twig and 7777777 in Jinja2.
 ```
 https://portswigger.net/web-security/images/template-decision-tree.png
 
