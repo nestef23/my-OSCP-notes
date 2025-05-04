@@ -37,3 +37,14 @@ We see two interesting entries in the last lines:
 - tftp - running service
   
 Now this gives me more info about potential attack vectors.
+Other interesting files
+```
+/etc/hosts - potential vhosts, subdomains?
+/root/.ssh/id_rsa	- Root shell via SSH
+/home/<user>/.ssh/id_rsa	- User shell via SSH
+/etc/shadow	- Password hashes to crack
+/root/.bash_history	- Commands, maybe passwords
+/etc/crontab	- Scheduled jobs to hijack
+/var/www/html/.env	- App secrets
+/proc/self/environ	- Possible RCE via env injection
+```
