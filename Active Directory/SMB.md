@@ -44,13 +44,3 @@ This will show user permissions to each share
 ```
 netexec smb <domain> -u <user> -p '<password>' --shares
 ```
-
-## Evil-WinRM
-Execution!
-```
-# evil-winrm -u emily.oscars -p 'Q!3@Lp#M6b*7t*Vt' -i cicada.htb
-evil-winrm -u <user> -p '<password>' -i <domain>
-
-# Using NT hash
-evil-winrm -u <user> -H '<NT hash>' -i <domain>
-```
