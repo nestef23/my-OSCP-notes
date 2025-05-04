@@ -19,3 +19,4 @@ evil-winrm -k file.key -c file.crt -i <domain>
 # Connect to encrypted winrm [5986/tcp]
 evil-winrm -S
 ```
+Getting certs from PFX file: https://github.com/nestef23/my-OSCP-notes/blob/main/InitialAccess/SpecificCases/PFX_file.md
