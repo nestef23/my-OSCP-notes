@@ -20,6 +20,11 @@ impacket-lookupsid user.name@cicada.htb
 ```
 
 ## netexec
+### basic info
+Get the hostname and domain name
+```
+netexec smb <IP>
+```
 ### Password spraying
 In this scenario we want to perform password spraying with a known password.
 1. Gett all usernames
