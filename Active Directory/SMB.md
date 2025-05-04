@@ -48,4 +48,5 @@ Must have user credentials.
 This will show user permissions to each share
 ```
 netexec smb <domain> -u <user> -p '<password>' --shares
+netexec smb <domain> -u Anonymous -p '' --shares
 ```
