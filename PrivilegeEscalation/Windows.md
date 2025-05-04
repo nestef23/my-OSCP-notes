@@ -3,6 +3,10 @@ Whenewer possible, use winpeas
 
 https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS
 
+Also check out this:
+
+https://github.com/nestef23/my-OSCP-notes/blob/main/Active%20Directory/Local-Privesc.md
+
 ## Basic info
 ```
 systeminfo
