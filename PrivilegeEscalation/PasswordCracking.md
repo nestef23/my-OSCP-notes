@@ -35,7 +35,7 @@ unshadow passwd shadow > unshadow.txt
 # Crack the unshadowed file
 john --wordlist=/usr/share/wordlists/rockyou.txt --format=sha512crypt unshadow.txt
 ```
-### SHH keys
+### SSH keys
 ```
 # Generate text file john understands
 # ssh2john [id_rsa private key file] > [output file]
@@ -43,6 +43,15 @@ ssh2john id_rsa > id_rsa_hash.txt
 
 # Crack the output file
 john --wordlist=/usr/share/wordlists/rockyou.txt id_rsa_hash.txt
+```
+
+## PFX files
+```
+# Generate text file john understands
+pfx2john file.pfx > hash.txt
+
+# Crack the output file
+john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 ```
 
 ### ZIP & RAR files
