@@ -68,8 +68,9 @@ nc -nlvp 4444
 # Restart the service
 sc.exe stop VSS
 sc.exe start VSS
-
-# Connection should be received NOW
 ```
+The above-obtained shell is unstable and might die after a few seconds. A more efficient way would be to obtain a meterpreter shell and then quickly migrate to a more stable process.
+
+Refer to: https://github.com/nestef23/my-OSCP-notes/blob/e963b72f058faffbab4a14b35eb2f6878be04900/InitialAccess/revshells.md#with-msfvenom
 
 
