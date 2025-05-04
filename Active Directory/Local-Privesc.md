@@ -1,4 +1,6 @@
 ## Start here
+Also try this: https://github.com/nestef23/my-OSCP-notes/blob/main/PrivilegeEscalation/Windows.md
+
 Check user privileges
 ```
 whoami /priv
