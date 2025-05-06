@@ -28,6 +28,10 @@ bloodhound-python -d <domain> -u <user> -p <password> -ns <DC IP> -c All
 2. Go through all interesting accounts and mark as High value
 3. Go through pre-built queries, Click on nodes etc.
 
+CLICK RMP ON EDGE -> Help!!!
+
+It will show Abuse commands!!!
+
 ## Escalation Paths
 
 ### WriteOwner
