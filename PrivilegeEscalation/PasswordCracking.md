@@ -77,6 +77,11 @@ hashcat -m 1710 -o results.txt hash.txt /usr/share/wordlists/rockyou.txt
 # hash.txt – hashes to be cracked
 # /usr/share/wordlists/rockyou.txt – wordlist
 ```
+### psafe3
+```
+hashcat -a 0 -m 5200 Backup.psafe3 /usr/share/wordlists/rockyou.txt
+```
+
 ## Hydra
 ### HTTP Post form
 ```
