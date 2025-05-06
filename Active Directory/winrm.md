@@ -2,6 +2,12 @@ Open port (one of them):
 - 5985/tcp
 - 5986/tcp
 
+## netexec
+Verify if user credentials work
+```
+netexec winrm <host/IP> -u <user> -p <password>
+```
+
 ## evil-winrm
 https://github.com/Hackplayers/evil-winrm
 
