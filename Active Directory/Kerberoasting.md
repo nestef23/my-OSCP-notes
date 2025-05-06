@@ -28,3 +28,7 @@ Simply do
 ```
 sudo ntpdate <Domain controller>
 ```
+Crack the hash using hashcat
+```
+hashcat -a 0 -m 13100 hash.txt /usr/share/wordlists/rockyou.txt
+```
