@@ -15,6 +15,8 @@ GetUserSPNs.py <domain>/<user>:<password> -request -save
 
 ## TargetedKerberos.py
 Useful for abusing certain Bloodhound edges.
+
+https://github.com/ShutdownRepo/targetedKerberoast.git
 ```
 targetedKerberoast.py -v -d '<domain>' -u '<Owned USer>' -p '<password>'
 ```
