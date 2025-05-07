@@ -56,3 +56,10 @@ stty -echo raw
 fg
 stty rows 41 columns 166
 ```
+OR
+```
+script /dev/null -c bash
+# Ctrl + z
+stty -raw echo; fg
+# Enter (Return) x2
+```
