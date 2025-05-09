@@ -3,7 +3,7 @@ This covers all scenarios where password may need to be cracked
 
 ## Identifying hashes
 ```
-wget https://gitlab.com/kalilinux/packages/hash-identifier/-/raw/kali/master/hash-id.py.
+wget https://gitlab.com/kalilinux/packages/hash-identifier/-/raw/kali/master/hash-id.py
 
 python3 hash-id.py
 ```
