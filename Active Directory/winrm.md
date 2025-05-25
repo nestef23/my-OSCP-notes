@@ -25,4 +25,15 @@ evil-winrm -k file.key -c file.crt -i <domain>
 # Connect to encrypted winrm [5986/tcp]
 evil-winrm -S
 ```
+Menu with usefull functions
+```
+*Evil-WinRM* PS C:\Users\svc-alfresco\Desktop> menu
+[+] Bypass-4MSI
+[+] services
+[+] upload
+[+] download
+[+] menu
+[+] exit
+
+```
 Getting certs from PFX file: https://github.com/nestef23/my-OSCP-notes/blob/main/InitialAccess/SpecificCases/PFX_file.md
